@@ -19,9 +19,13 @@ steps:
   inputs:
     SonarCloud: 'sonar007'
     organization: 'sunnyorg007'
-    scannerMode: 'MSBuild'
-    projectKey: 'sunnyorg007_sunny00'
-    projectName: 'sunny00'
+    scannerMode: 'Other'
+    extraProperties: |
+      # Additional properties that will be passed to the scanner,
+      # Put one key=value per line, example:
+      # sonar.exclusions=**/*.bin
+      sonar.projectKey=sunnyorg007_sunny00
+      sonar.projectName=sunny00
 
 - script: |
     npm install
@@ -30,8 +34,8 @@ steps:
   displayName: 'npm install, build, and test'
 
 
+- task: SonarCloudAnalyze@1
+
 - task: SonarCloudPublish@1
   inputs:
     pollingTimeoutSec: '300'
-
-- task: SonarCloudAnalyze@1
