@@ -17,8 +17,8 @@ steps:
 
 - task: SonarCloudPrepare@1
   inputs:
-    SonarCloud: 'sonar calc'
-    organization: 'benjiligeddam0428'
+    SonarCloud: 'sonar007'
+    organization: 'sunnyorg007'
     scannerMode: 'Other'
 
 - script: |
