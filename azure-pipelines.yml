@@ -19,7 +19,9 @@ steps:
   inputs:
     SonarCloud: 'sonar007'
     organization: 'sunnyorg007'
-    scannerMode: 'Other'
+    scannerMode: 'MSBuild'
+    projectKey: 'sunnyorg007_sunny00'
+    projectName: 'sunny00'
 
 - script: |
     npm install
