@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: insane
+  vmImage: 'insane'
 
 steps:
 - task: NodeTool@0
