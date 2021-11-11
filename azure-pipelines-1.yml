@@ -6,8 +6,7 @@
 trigger:
 - master
 
-pool:
-  vmImage: 'insane'
+pool: self-hosted
 
 steps:
 - task: NodeTool@0
